@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-styled {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(168, 85, 247, 0.3) transparent;
+  }
+
+  .scrollbar-styled::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100vh;
+    margin: 4px;
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      rgba(168, 85, 247, 0.5),
+      rgba(236, 72, 153, 0.5)
+    );
+    border-radius: 100vh;
+    transition: all 0.3s ease;
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(168, 85, 247, 0.8),
+      rgba(236, 72, 153, 0.8)
+    );
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

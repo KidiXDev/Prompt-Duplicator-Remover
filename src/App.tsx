@@ -24,8 +24,6 @@ function App() {
     }
   };
 
-  // Removed unused handleFormat function
-
   const handleFormatWithOptions = (options: FormatOptions) => {
     setInput(formatPrompts(input, options));
   };
@@ -48,7 +46,7 @@ function App() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Enter your prompts here, separated by commas..."
-              className="w-full h-32 sm:h-40 bg-white/50 rounded-lg p-3 sm:p-4 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-300 text-sm sm:text-base scrollbar-styled"
+              className="w-full h-48 sm:h-64 bg-white/50 rounded-lg p-3 sm:p-4 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-300 text-sm sm:text-base scrollbar-styled"
             />
 
             <div className="flex justify-between items-center mt-3 sm:mt-4">
